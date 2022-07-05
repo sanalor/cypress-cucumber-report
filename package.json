@@ -1,0 +1,33 @@
+{
+  "name": "cypress-cucumber-orangebank",
+  "version": "1.0.0",
+  "description": "Proof of concept of Orange Bank",
+  "main": "index.js",
+  "scripts": {
+    "cypress": "cypress open",
+    "test": "cypress run --browser chrome",
+    "test:debug": "cypress run --headed --browser chrome -e TAGS=\"@orange-proof-pass or @orange-proof-fail\""
+  },
+  "keywords": [
+    "cypress",
+    "cucumber",
+    "javascript",
+    "htmlreports"
+  ],
+  "author": "Rodrigo Sánchez Alonso",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^9.1.0",
+    "cypress-cucumber-preprocessor": "^4.3.1",
+    "multiple-cucumber-html-reporter": "^1.21.4"
+  },
+  "cypress-cucumber-preprocessor": {
+    "nonGlobalStepDefinitions": true,
+    "cucumberJson": {
+      "generate": true,
+      "outputFolder": "cypress/cucumber-json",
+      "filePrefix": "",
+      "fileSuffix": ".cucumber"
+    }
+  }
+}
